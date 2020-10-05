@@ -1,3 +1,20 @@
+'''
+******************************
+Criação do arquivo de entrada: 
+******************************
+
+    Objetivo: a partir do conjuto de dados do input_clean gerar múltiplas variações com a inserção ou não de ruído,
+                neste caso o ruído é definido como sendo o max_ratio. Assim, podem ser subtraido ou adicionado ao input_clean
+                um valor x tal que, -max_ratio <= x <=max_ratio. Nesse código para cada lista do input_clean são geradas samples
+                variações.
+
+    Metodologia: 1- Para cada elemento do inpuit_clean é decidido aleatoriamente a inserção de ruido. 0 sem ruido e 1 com ruido
+                 2- Caso o dado não tenha ruido, ele é escrito no arquivo no seu formato original.
+                 3- Caso contrário, é definido um random entre os limites do max_ratio para determinar o seu ruido
+                 4- Em seguida ele é escrito no arquivo de saida.
+
+'''
+
 import random 
 random.seed(1) #incializa semente para garantir que sempre sejam obtidos os mesmo conjuntos de dados
 
@@ -37,6 +54,21 @@ for i in range (0, len(input_clean)):
         
 file_input.close()
 
+
+'''
+*****************************
+Criação do arquivo de saida: 
+*****************************
+
+    Objetivo - Para cada linha do arquivo de entrada, deve-se encontrar o seu binário de 8 bits BCD equivalente no "código anel"
+    https://www.passeidireto.com/arquivo/33887484/sistemas-digitais-eletronica-digital-apostila
+
+    Metodologia - 1- Analisa se o dado é equivalente a 1 ou 0 independete de ter ruido ou não.
+                2- Através da análise dos 3 bits lidos na etapa 1, sabe-se qual o equivalente do numero em decimal
+                3- Por fim, o número em decimal é transformado para o BCD código em anel em 8 bits e é escrito no arquivo de saida
+
+'''
+
 size_out= len(lista)
 i=0; aux=0
 code_bin = [0]*column
@@ -65,7 +97,3 @@ while(i< size_out):
     out=[0]*8 #zera o vetor de saida para ser reescrito
 
 file_output.close()
-
-
-
-
