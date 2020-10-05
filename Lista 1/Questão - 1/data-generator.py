@@ -15,12 +15,12 @@ file_input = open('./input_x.txt', 'w')
 count=0
 
 for i in range (0, len(input_clean)):
-    print('Tipo de Entrada:', i)
+    #print('Tipo de Entrada:', i)
     for j in range (0, samples):
-        print('  Amostra:', j)
+        #print('  Amostra:', j)
         for k in range(0, column): #Analisa as posição de inserção do ruido randomicamente
             ruido[k]=random.randrange(0, 2) #0=sem ruido, 1=ruido
-        print(ruido)
+        #print(ruido)
         for k in range(0, column):
             if(ruido[k]==0): #sem ruido
                 file_input.write(str(input_clean[i][k]))
@@ -43,5 +43,10 @@ classes = ["1,0,0,0,0,0,0,0",
            "0,0,0,0,0,1,0,0", 
            "0,0,0,0,0,0,1,0", 
            "0,0,0,0,0,0,0,1"]
+column=8
+rown =8 
+size_classes = len(classes)
+column = len(classes[1])
+print(classes[1]))
 
 
