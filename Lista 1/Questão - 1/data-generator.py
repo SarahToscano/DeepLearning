@@ -10,7 +10,6 @@ count=0
 column= len(input_clean[0]) #Tamanho dos dados de entrada a cada leitura
 rown=len(input_clean)*samples
 ruido=[0]*column #salva as informaçoes sobre ruido
-
 file_input = open('./input_x.txt', 'w')
 lista=[]
 #Arquivo de entrada
@@ -63,7 +62,7 @@ while(i< size_out):
         else:
             file_output.write("\n")
     aux=0
-    out=[0]*8
+    out=[0]*8 #zera o vetor de saida para ser reescrito
 
 file_output.close()
 
