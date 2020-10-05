@@ -54,7 +54,7 @@ while(i< size_out):
         i+=1
     for b in range(column-1,-1,-1): 
         aux+=code_bin[b]* (2 **peso[b]) #calcula numero decimal equivalente ao binario da saida
-    out[aux]=1 #define o bit para 1
+    out[aux]=1 #seta o bit para 1
     for k in range (0, 8):
         file_output.write(str(out[k])) #escreve todos os bits sem o '[' e ']'
         if(k!=7):
