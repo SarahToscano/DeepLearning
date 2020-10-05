@@ -38,22 +38,11 @@ for i in range (0, len(input_clean)):
         
 file_input.close()
 
-
-
-classes = ["1,0,0,0,0,0,0,0", 
-           "0,1,0,0,0,0,0,0", 
-           "0,0,1,0,0,0,0,0", 
-           "0,0,0,1,0,0,0,0",
-           "0,0,0,0,1,0,0,0", 
-           "0,0,0,0,0,1,0,0", 
-           "0,0,0,0,0,0,1,0", 
-           "0,0,0,0,0,0,0,1"] 
-
 size_out= len(lista)
 i=0; aux=0
 code_bin = [0]*column
 peso=[2,1,0]
-
+out=[0]*8
 file_output = open('./output_y.txt', 'w')
 
 #Arquivo de saida
@@ -64,12 +53,17 @@ while(i< size_out):
         else:
             code_bin[j]=1 #Valores >= 0.9 são equivalentes a 1
         i+=1
-    print("code bin", code_bin)
     for b in range(column-1,-1,-1): 
-        aux+=code_bin[b]* (2 **peso[b]) #calcula o binario em 3 bits equivalente da saida
-    file_output.write(str(format(aux,'08b')))
-    file_output.write("\n")
+        aux+=code_bin[b]* (2 **peso[b]) #calcula numero decimal equivalente ao binario da saida
+    out[aux]=1 #define o bit para 1
+    for k in range (0, 8):
+        file_output.write(str(out[k])) #escreve todos os bits sem o '[' e ']'
+        if(k!=7):
+            file_output.write(',')
+        else:
+            file_output.write("\n")
     aux=0
+    out=[0]*8
 
 file_output.close()
 
