@@ -71,9 +71,9 @@ Criação do arquivo de saida:
 
 size_out= len(lista)
 i=0; aux=0
-code_bin = [0]*column
+code_bin = [-1]*column
 peso=[2,1,0]
-out=[0]*8
+out=[-1]*8
 file_output = open('./output_y.txt', 'w')
 
 #Arquivo de saida
@@ -94,6 +94,6 @@ while(i< size_out):
         else:
             file_output.write("\n")
     aux=0
-    out=[0]*8 #zera o vetor de saida para ser reescrito
+    out=[-1]*8 #seta para -1 o vetor de saida para ser reescrito
 
 file_output.close()
