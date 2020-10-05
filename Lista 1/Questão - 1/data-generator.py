@@ -60,12 +60,12 @@ file_input.close()
 Criação do arquivo de saida: 
 *****************************
 
-    Objetivo - Para cada linha do arquivo de entrada, deve-se encontrar o seu binário de 8 bits BCD equivalente no "código anel"
+    Objetivo: Para cada linha do arquivo de entrada, deve-se encontrar o seu binário de 8 bits BCD equivalente no "código anel"
     https://www.passeidireto.com/arquivo/33887484/sistemas-digitais-eletronica-digital-apostila
 
-    Metodologia - 1- Analisa se o dado é equivalente a 1 ou 0 independete de ter ruido ou não.
-                2- Através da análise dos 3 bits lidos na etapa 1, sabe-se qual o equivalente do numero em decimal
-                3- Por fim, o número em decimal é transformado para o BCD código em anel em 8 bits e é escrito no arquivo de saida
+    Metodologia: 1- Analisa se o dado é equivalente a 1 ou 0 independete de ter ruido ou não.
+                 2- Através da análise dos 3 bits lidos na etapa 1, sabe-se qual o equivalente do numero em decimal
+                 3- Por fim, o número em decimal é transformado para o BCD código em anel em 8 bits e é escrito no arquivo de saida
 
 '''
 
