@@ -4,9 +4,9 @@ random.seed(1) #incializa semente para garantir que sempre sejam obtidos os mesm
 input_clean = [[0, 0, 0], [0, 0, 1], [0, 1, 0], [0, 1, 1], 
                [1, 0, 0], [1, 0, 1], [1, 1, 0], [1, 1, 1]]
 max_ratio=0.1
-samples = 2 #define o numero de amostras de teste para cada tipo de entrada
-count=0
+samples = 50 #num de amostras de teste para cada tipo de entrada, linhas do arquivo de entrada = samples*8
 
+count=0
 column= len(input_clean[0]) #Tamanho dos dados de entrada a cada leitura
 rown=len(input_clean)*samples
 ruido=[0]*column #salva as informaçoes sobre ruido
