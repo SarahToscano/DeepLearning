@@ -71,7 +71,7 @@ Criação do arquivo de saida:
 
 size_out= len(lista)
 i=0; aux=0
-code_bin = [-1]*column
+code_bin = [0]*column
 peso=[2,1,0]
 out=[-1]*8
 file_output = open('./output_y.txt', 'w')
