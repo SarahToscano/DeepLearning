@@ -95,5 +95,4 @@ while(i< size_out):
             file_output.write("\n")
     aux=0
     out=[-1]*8 #seta para -1 o vetor de saida para ser reescrito
-
 file_output.close()
