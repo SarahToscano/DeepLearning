@@ -7,7 +7,6 @@ samples=400
 file_input = open('./data_x.txt', 'w')
 file_output = open('./data_y.txt', 'w')
 
-
 for i in range(samples):
     x = random.uniform(0, 4)
     y = math.sin(math.pi * x) / (math.pi * x)
@@ -16,3 +15,6 @@ for i in range(samples):
     if(i!=samples-1):
         file_input.write('\n')
         file_output.write('\n')
+
+file_input.close()
+file_output.close()
