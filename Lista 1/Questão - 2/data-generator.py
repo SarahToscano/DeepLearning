@@ -13,8 +13,8 @@ for i in range(samples):
     file_input.write(str(x))
     file_output.write(str(y))
     if(i!=samples-1):
-        file_input.write('\n')
-        file_output.write('\n')
+        file_input.write(',\n')
+        file_output.write(',\n')
 
 file_input.close()
 file_output.close()
