@@ -4,8 +4,8 @@ import numpy as np
 random.seed(0) #incializa semente para garantir que sempre sejam obtidos os mesmo conjuntos de dados
 
 samples=1000
-file_input = open('./data_x.txt', 'w')
-file_output = open('./data_y.txt', 'w')
+file_input = open('./data/data_x_b.txt', 'w')
+file_output = open('./data/data_y_b.txt', 'w')
 
 for i in range(samples):
     for k in range (0,4):
